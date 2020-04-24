@@ -1,5 +1,5 @@
-# # Need to be careful if using any bash commands that aren't compatible with zsh
-# source ~/.bash_profile
+# Need to be careful if using any bash commands that aren't compatible with zsh
+source ~/.bash_profile
 # source ~/.git-prompt.sh
 # ZSH_THEME="robbyrussell"
 

@@ -5,6 +5,7 @@
 # Check if something is installed
 # https://stackoverflow.com/a/34389425
 # TODO: Also test if on macos or linux... install or upgrade linuxbrew if not
+# TODO: Seems like a thing that can be abstracted
 which -s brew
 if [[ $? != 0 ]] ; then
     # Install Homebrew
@@ -21,9 +22,33 @@ if [[ $? != 0 ]] ; then
     echo "### Installing rcm to manage dotfiles"
     brew tap thoughtbot/formulae
     brew install rcm
+else
+    echo "### rcm already installed"
+    brew update rcm
+fi
+# End Install rcm
+
+# Install ZSH
+which -s zsh
+if [[ $? != 0 ]] ; then
+    echo "### Installing zsh!"
+    brew install zsh
+else
+    echo "### Updating ZSH"
+    brew update zsh
 fi
 
-#TODO: Install and configure zsh?
+if [[ ZSH ]] ; then
+    echo "#### OH MY ZSH INSTALLED"
+else
+    echo "### Installing OH MY ZSH"
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+# End Install ZSH
+
+#TODO: Install vim/neovim goodies
+# https://github.com/junegunn/vim-plug
 
 #TODO: How to test for xcode and if the system is up to date
 # install Xcode Command Line Tools

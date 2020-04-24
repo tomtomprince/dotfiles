@@ -1,21 +1,25 @@
-## Install the basics
+## Assumptions
 
-I chose to use rcm defaults and try to run everything from the home directory as much as possible
+1. Repo is cloned to ~/.dotfiles - rcm defaults to the directory and I've tried to stick to defaults as much as possible i.e.
+
+```
+git clone https://github.com/tomtomprince/dotfiles.git ~/.dotfiles
+```
+
+2. zsh is the terminal of choice
+3. Currently Mac only
+
+## Install the basics
 
 ```
 sh ~/.dotfiles/bootstrap.sh
 ```
 
-This does the following:
+This installs/updates the following: Homebrew, rcm, zsh, and oh-my-zsh
 
-1. Install Homebrew TODO: Handle linux and if already installed
-2. Install rcm TODO: Handle if already installed
-3. sync dots to home dir using rcup -d ~/.dotfiles TODO: See if doing this respects the excludes in rcrc without setting RCRC env
-4. Should install zsh and company?
-- https://ohmyz.sh/
+## Sync dotfiles with rcm
 
-TODO: rcup doesn't hit tags so need to have solution for that
+1. rcup -d ~/.dotfiles
+2. For tagged use rcup -t tag1 tag2
 
-Also, this .zshrc is garbage...
-
-TODO: Maybe install xcode and update to latest if on mac?
+TODO: rcup doesn't hit tags so need to have solution for that. At the very least a script to run
