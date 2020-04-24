@@ -12,6 +12,9 @@ This does the following:
 2. Install rcm TODO: Handle if already installed
 3. sync dots to home dir using rcup -d ~/.dotfiles TODO: See if doing this respects the excludes in rcrc without setting RCRC env
 4. Should install zsh and company?
+- https://ohmyz.sh/
+
+TODO: rcup doesn't hit tags so need to have solution for that
 
 Also, this .zshrc is garbage...
 
