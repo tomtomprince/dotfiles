@@ -1,0 +1,1 @@
+EXCLUDES="*.sh *:README.md *:LICENSE *:*.example *:tags *:test-files"

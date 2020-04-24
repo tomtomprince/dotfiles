@@ -1,0 +1,27 @@
+# Also heavily inspired by https://github.com/adamgotterer/dotfiles/blob/development/.gitignore
+
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+.project
+.TemporaryItems*
+
+# Text editor temp files #
+##########################
+*.swp
+*.swn
+*.swo
+.#*
+*.tmpproj
+
+# Network history
+.netrwhist
+
+# Spelling
+_vim/spell
+
+# Dotfiles
+bash_local

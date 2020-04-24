@@ -1,0 +1,22 @@
+# Need to be careful if using any bash commands that aren't compatible with zsh
+source ~/.bash_profile
+source ~/.git-prompt.sh
+ZSH_THEME="robbyrussell"
+
+## From https://www.themoderncoder.com/add-git-branch-information-to-your-zsh-prompt/
+## Need to install git-prompt - https://stackoverflow.com/questions/12870928/mac-bash-git-ps1-command-not-found
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats '<%b>'
+ 
+# Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+PROMPT='${PWD/#$HOME/~}: '
+# Add RPROMPT?
+#RPROMPT=\$vcs_info_msg_0_
+
+#end https://www.themoderncoder.com/add-git-branch-information-to-your-zsh-prompt/
+
