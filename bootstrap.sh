@@ -33,6 +33,7 @@ which -s zsh
 if [[ $? != 0 ]] ; then
     echo "### Installing zsh!"
     brew install zsh
+    chsh -s $(which zsh)
 else
     echo "### Updating ZSH"
     brew update zsh
@@ -43,6 +44,7 @@ if [[ ZSH ]] ; then
 else
     echo "### Installing OH MY ZSH"
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    # change your shell to zsh
 fi
 
 # End Install ZSH
