@@ -53,7 +53,7 @@ fi
 # Consider adding neovim?
 # vim
 vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
-
+echo "### Don't forget to install color scheme!"
 #TODO: How to test for xcode and if the system is up to date
 # install Xcode Command Line Tools
 #xcode-select --install

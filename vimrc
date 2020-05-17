@@ -24,6 +24,7 @@ let NERDTreeShowHidden=1
 set number
 
 " Set up syntax highlighting
+colorscheme medic_chalk
 set term=xterm-256color
 filetype plugin indent on
 syntax on
