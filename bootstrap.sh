@@ -49,8 +49,10 @@ fi
 
 # End Install ZSH
 
-#TODO: Install vim/neovim goodies
-# https://github.com/junegunn/vim-plug
+# Given a .vimrc with plugins configured, this should auto install these
+# Consider adding neovim?
+# vim
+vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
 
 #TODO: How to test for xcode and if the system is up to date
 # install Xcode Command Line Tools
