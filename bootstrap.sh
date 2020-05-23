@@ -24,7 +24,7 @@ if [[ $? != 0 ]] ; then
     brew install rcm
 else
     echo "### rcm already installed"
-    brew update rcm
+    brew upgrade rcm
 fi
 # End Install rcm
 
@@ -36,7 +36,7 @@ if [[ $? != 0 ]] ; then
     chsh -s $(which zsh)
 else
     echo "### Updating ZSH"
-    brew update zsh
+    brew upgrade zsh
 fi
 
 if [[ ZSH ]] ; then
@@ -44,9 +44,7 @@ if [[ ZSH ]] ; then
 else
     echo "### Installing OH MY ZSH"
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    # change your shell to zsh
 fi
-
 # End Install ZSH
 
 # Given a .vimrc with plugins configured, this should auto install these

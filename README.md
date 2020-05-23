@@ -17,8 +17,13 @@ sh ~/.dotfiles/bootstrap.sh
 
 This installs/updates the following: Homebrew, rcm, zsh, and oh-my-zsh
 
-## Sync dotfiles with rcm
+## List out dotfiles in directory
 
 ```
-rcup -d ~/.dotfiles
+lsrc -d ~/dotfiles
+```
+## Sync dotfiles in directory
+
+```
+rcup -v -d ~/.dotfiles
 ```

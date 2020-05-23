@@ -11,6 +11,7 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ParamagicDev/vim-medic_chalk'
 call plug#end()
 
 " Setup some configs
