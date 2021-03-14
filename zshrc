@@ -105,3 +105,5 @@ export YVM_DIR=/Users/thomasprince/.yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
 
 . ~/.zsh_aliases
+
+export PATH=/usr/local/bin:$PATH

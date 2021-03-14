@@ -4,17 +4,41 @@
 
 # Check if something is installed
 # https://stackoverflow.com/a/34389425
+
 # TODO: Also test if on macos or linux... install or upgrade linuxbrew if not
+
+#TODO: How to test for xcode and if the system is up to date
+# install Xcode Command Line Tools
+xcode-select --install
+
+# Install the latest MacOS updates
+sudo softwareupdate -i -a
+
 # TODO: Seems like a thing that can be abstracted
 which -s brew
 if [[ $? != 0 ]] ; then
     # Install Homebrew
     echo "### Installing Homebrew"
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/thomasprince/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    # Old ruby command
+    # ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
     echo "### Updating Homebrew"
     brew update
 fi
+
+# brew doctor just in case
+brew doctor
+
+# Get latest non apple git
+# https://ajahne.github.io/blog/tools/2018/06/11/how-to-upgrade-git-mac.html
+brew install git
+# Make sure we use that version
+export PATH=/usr/local/bin:$PATH
+echo "### Current git version"
+git --version
 
 # install RCM to manage dotfiles (rcup is one of the bins installed, not rcm)
 which -s rcup
@@ -39,6 +63,7 @@ else
     brew upgrade zsh
 fi
 
+# ZSH is the dir that .oh-my-zsh lives in
 if [[ ZSH ]] ; then
     echo "#### OH MY ZSH INSTALLED"
 else
@@ -52,10 +77,4 @@ fi
 # vim
 vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
 echo "### Don't forget to install color scheme!"
-#TODO: How to test for xcode and if the system is up to date
-# install Xcode Command Line Tools
-#xcode-select --install
-
-# Install the latest MacOS updates
-#sudo softwareupdate -i -a
 
