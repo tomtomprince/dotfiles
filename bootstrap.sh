@@ -50,6 +50,9 @@ else
     echo "### rcm already installed"
     brew upgrade rcm
 fi
+
+## sync dotfiles!
+rcup -v -d ~/.dotfiles
 # End Install rcm
 
 # Install ZSH

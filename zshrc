@@ -92,8 +92,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+export PATH="/opt/homebrew/opt:$PATH"
 
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/bin:/Users/thomasprince/Library/Python/3.7/bin:$PATH"
