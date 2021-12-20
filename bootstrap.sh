@@ -20,7 +20,7 @@ if [[ $? != 0 ]] ; then
     # Install Homebrew
     echo "### Installing Homebrew"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/thomasprince/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
     # Old ruby command
     # ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -62,8 +62,10 @@ if [[ $? != 0 ]] ; then
     brew install zsh
     chsh -s $(which zsh)
 else
-    echo "### Updating ZSH"
-    brew upgrade zsh
+    echo "### ZSH Already Exists"
+    # Now that zsh is default on mac there's no need to upgrade unless I'm on linux
+    # echo "### Updating ZSH"
+    # brew upgrade zsh
 fi
 
 # ZSH is the dir that .oh-my-zsh lives in
@@ -79,5 +81,5 @@ fi
 # Consider adding neovim?
 # vim
 vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
-echo "### Don't forget to install color scheme!"
+echo "### Vim ready to go!"
 

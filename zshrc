@@ -92,17 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-export PATH="/opt/homebrew/opt:$PATH"
-
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/bin:/Users/thomasprince/Library/Python/3.7/bin:$PATH"
-
-export PATH="/usr/local/pgsql/bin:$PATH"
-export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
-
-export YVM_DIR=/Users/thomasprince/.yvm
+export YVM_DIR=~/.yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
 
 . ~/.zsh_aliases

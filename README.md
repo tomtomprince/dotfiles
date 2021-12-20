@@ -20,7 +20,7 @@ This installs/updates the following: Homebrew, rcm, zsh, and oh-my-zsh
 ## List out dotfiles in directory
 
 ```
-lsrc -d ~/dotfiles
+lsrc -d ~/.dotfiles
 ```
 ## Sync dotfiles in directory
 
