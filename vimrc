@@ -12,6 +12,7 @@ Plug 'tpope/vim-sensible'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ParamagicDev/vim-medic_chalk'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 " Setup some configs

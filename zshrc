@@ -98,3 +98,4 @@ export YVM_DIR=~/.yvm
 . ~/.zsh_aliases
 
 export PATH=/usr/local/bin:$PATH
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

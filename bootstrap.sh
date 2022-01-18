@@ -77,6 +77,18 @@ else
 fi
 # End Install ZSH
 
+# install fzf
+which -s fzf
+if [[ $? != 0 ]] ; then
+    echo "### Installing fzf"
+    brew install fzf
+    # To install useful key bindings and fuzzy completion:
+    $(brew --prefix)/opt/fzf/install
+else
+    echo "### rcm already installed"
+    brew upgrade fzf
+fi
+
 # Given a .vimrc with plugins configured, this should auto install these
 # Consider adding neovim?
 # vim
