@@ -85,7 +85,7 @@ if [[ $? != 0 ]] ; then
     # To install useful key bindings and fuzzy completion:
     $(brew --prefix)/opt/fzf/install
 else
-    echo "### rcm already installed"
+    echo "### fzf already installed"
     brew upgrade fzf
 fi
 
