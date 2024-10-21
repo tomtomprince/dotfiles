@@ -14,6 +14,10 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ParamagicDev/vim-medic_chalk'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = [
+  \ 'coc-tsserver'
+  \ ]
 call plug#end()
 
 " Setup some configs

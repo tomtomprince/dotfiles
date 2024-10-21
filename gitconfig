@@ -10,7 +10,7 @@
 	autocrlf = input
 	# trustctime = false
 	# precomposeunicode = false
-	# pager = delta --dark
+	pager = delta --dark
 	# ignorecase = false
 
 [credential]
@@ -19,8 +19,9 @@
 # [fetch]
 # 	prune = true
 
-# [push]
-# 	default = simple
+[push]
+	default = current
+	autoSetupRemote = true
 
 # [color]
 # 	diff = auto
@@ -90,3 +91,5 @@
 # 	gpgsign = true
 # [gpg]
 # 	program = /usr/local/bin/gpg
+[init]
+	defaultBranch = main
