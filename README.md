@@ -2,6 +2,7 @@
 
 1. Repo is cloned to ~/.dotfiles - rcm defaults to the directory and I've tried to stick to defaults as much as possible i.e.
 
+
 ```
 git clone https://github.com/tomtomprince/dotfiles.git ~/.dotfiles
 ```
